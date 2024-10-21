@@ -1,27 +1,44 @@
 <!DOCTYPE html>
-<html lang="kz">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darya's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Мое портфолио</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="moon"></div>
-    <div class="clouds"></div>
+    <header id="home">
+        <div class="container">
+            <h1>Ваше Имя</h1>
+            <p>Добро пожаловать в мое портфолио</p>
+        </div>
+    </header>
 
-    <div class="content">
-        <h1>Welcome, I'm Darya!</h1>
-        <p class="description">
-            From Almaty, I've competed in math and literature competitions, scored a 7.5 on IELTS, and have a passion for art and neuroscience.
-        </p>
-    </div>
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2>Мои достижения</h2>
+            <ul>
+                <li>Достижение 1</li>
+                <li>Достижение 2</li>
+                <li>Достижение 3</li>
+            </ul>
+        </div>
+    </section>
 
-    <div class="water-reflection"></div>
+    <section id="photos" class="section">
+        <div class="container">
+            <h2>Мои фотографии</h2>
+            <div class="photo-gallery">
+                <img src="photo1.jpg" alt="Фотография 1">
+                <img src="photo2.jpg" alt="Фотография 2">
+                <img src="photo3.jpg" alt="Фотография 3">
+            </div>
+        </div>
+    </section>
 
-    <div id="star-container"></div>
-
-    <audio id="star-sound" src="click-sound.mp3" preload="auto"></audio>
+    <footer>
+        <p>Свяжитесь со мной: example@email.com</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
