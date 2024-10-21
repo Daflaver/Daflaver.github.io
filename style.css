@@ -7,13 +7,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffe6e9;
+    background-color: #ffe6e9; /* Нежный розово-корраловый фон */
     color: #333;
+    cursor: url('default-cursor.png'), auto;
 }
 
 header {
     height: 100vh;
-    background-color: #ff6f61; 
+    background-color: #ff6f61; /* Коралловый цвет */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,11 +34,10 @@ header p {
 .section {
     padding: 100px 0;
     background-color: #fff;
-    transition: background-color 0.3s ease;
 }
 
 .section:nth-child(even) {
-    background-color: #ff9a8d; 
+    background-color: #ff9a8d; /* Светло-корраловый */
 }
 
 .container {
@@ -63,8 +63,11 @@ ul li {
 
 .photo-gallery {
     display: flex;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для галереи */
+    position: relative;
 }
 
 .photo-gallery img {
@@ -88,4 +91,26 @@ footer {
 
 footer p {
     font-size: 1.2rem;
+}
+
+/* Анимация курсора */
+.click-effect {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    position: absolute;
+    pointer-events: none;
+    animation: click-animation 0.5s ease-out forwards;
+}
+
+@keyframes click-animation {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
