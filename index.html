@@ -1,106 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darya's Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #3b2f2f; /* Шоколадный оттенок */
-            color: #f0e7d8; /* Светлый текст */
-        }
-
-        .header {
-            text-align: center;
-            padding: 50px 0;
-            background-color: #537a5a; /* Зелёный оттенок */
-            color: #f0e7d8;
-        }
-
-        .header h1 {
-            font-size: 48px;
-            margin: 0;
-        }
-
-        .about-section {
-            padding: 80px 20px;
-            background-color: #4a3d3d; /* Более глубокий шоколадный */
-            color: #f0e7d8;
-        }
-
-        .about-section p {
-            font-size: 20px;
-            line-height: 1.6;
-        }
-
-        .fun-features {
-            background-color: #537a5a;
-            padding: 80px 20px;
-            text-align: center;
-            color: #f0e7d8;
-        }
-
-        .fun-features h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
-        .flower-animation {
-            width: 100px;
-            height: 100px;
-            background: url('https://example.com/flower.png') no-repeat center center;
-            background-size: contain;
-            animation: grow 3s infinite;
-        }
-
-        @keyframes grow {
-            0% { transform: scale(0.8); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(0.8); }
-        }
-
-        /* Длинные секции для прокрутки */
-        .section {
-            height: 500px;
-            padding: 80px 20px;
-            background-color: #3b2f2f;
-        }
-
-        .section:nth-child(even) {
-            background-color: #537a5a;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="moon"></div>
+    <div class="clouds"></div>
 
-    <div class="header">
-        <h1>Welcome to Darya's World</h1>
-    </div>
-
-    <div class="about-section">
-        <h2>About Me</h2>
-        <p>
-            Hi! I'm Darya from Almaty. I love combining my passion for math, literature, and neurology
-            with my creative side in art and coding. Here, you'll discover a bit about my journey and what drives me!
+    <div class="content">
+        <h1>Welcome, I'm Darya!</h1>
+        <p class="description">
+            From Almaty, I've competed in math and literature competitions, scored a 7.5 on IELTS, and have a passion for art and neuroscience.
         </p>
     </div>
 
-    <div class="fun-features">
-        <h2>Fun Features</h2>
-        <div class="flower-animation"></div>
-        <p>Check out these blooming flowers as you explore the page!</p>
-    </div>
+    <div class="water-reflection"></div>
 
-    <div class="section">
-        <h2>More Cool Stuff Coming Soon...</h2>
-    </div>
+    <div id="star-container"></div>
 
-    <div class="section">
-        <h2>And Even More Fun Below...</h2>
-    </div>
+    <audio id="star-sound" src="click-sound.mp3" preload="auto"></audio>
 
+    <script src="script.js"></script>
 </body>
 </html>
