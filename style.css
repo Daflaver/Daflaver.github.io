@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffe6e9; /* нежный розово-корраловый фон */
+    background-color: #ffe6e9;
     color: #333;
 }
 
 header {
     height: 100vh;
-    background-color: #ff6f61; /* коралловый цвет */
+    background-color: #ff6f61; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@ header p {
 }
 
 .section:nth-child(even) {
-    background-color: #ff9a8d; /* светло-корраловый */
+    background-color: #ff9a8d; 
 }
 
 .container {
