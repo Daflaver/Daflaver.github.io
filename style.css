@@ -11,127 +11,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
     color: white;
+    overflow: hidden;
+    position: relative;
 }
 
 .content {
     text-align: center;
     z-index: 10;
+    padding: 20px;
 }
 
 h1 {
     font-size: 4rem;
     color: #ebaca2;
+    margin-bottom: 20px;
 }
 
 .description {
     font-size: 1.5rem;
-    margin-top: 20px;
     color: #ce6a6b;
 }
 
 .moon {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-color: #f3f4f6;
     border-radius: 50%;
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 50px 25px rgba(255, 255, 255, 0.7);
 }
 
-.clouds {
+body::before {
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url('clouds.png') repeat-x;
-    animation: moveClouds 60s linear infinite;
-    opacity: 0.5;
+    background: linear-gradient(135deg, #ebaca2, #ce6a6b);
     z-index: 1;
-}
-
-@keyframes moveClouds {
-    from { background-position: 0 0; }
-    to { background-position: 2000px 0; }
-}
-
-#star-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-}
-
-.star {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 17px solid white;
-    transform: rotate(35deg);
-    color: transparent;
-    cursor: pointer;
-}
-
-.star::before, .star::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-}
-
-.star::before {
-    border-bottom: 17px solid white;
-    transform: rotate(-70deg);
-    top: -12px;
-    left: -10px;
-}
-
-.star::after {
-    border-bottom: 17px solid white;
-    transform: rotate(-140deg);
-    top: -3px;
-    left: -10px;
-}
-
-.star {
-    border-bottom-color: #fdfd96;
-}
-
-@keyframes twinkling {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-}
-
-.water-reflection {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 20%;
-    background: linear-gradient(to bottom, transparent, rgba(33, 46, 83, 0.6));
-    z-index: 2;
-}
-
-.water-reflection::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('moon-reflection.png') no-repeat center top;
-    background-size: contain;
-    opacity: 0.3;
+    opacity: 0.1;
 }
