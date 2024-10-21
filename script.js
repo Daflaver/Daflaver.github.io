@@ -1,12 +1,22 @@
-window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.section');
-    const scrollPosition = window.pageYOffset;
-    
-    sections.forEach((section, index) => {
-        if (scrollPosition >= section.offsetTop - window.innerHeight / 2) {
-            section.style.backgroundColor = '#ff9a8d'; 
-        } else {
-            section.style.backgroundColor = '#fff'; 
-        }
-    });
+const gallery = document.getElementById('gallery');
+let scrollStep = 1;
+
+function scrollGallery() {
+    gallery.scrollBy(scrollStep, 0);
+
+    if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth || gallery.scrollLeft === 0) {
+        scrollStep = -scrollStep; 
+    }
+}
+
+setInterval(scrollGallery, 30);
+
+document.addEventListener('click', function(e) {
+    const effect = document.createElement('div');
+    effect.className = 'click-effect';
+    effect.style.left = `${e.pageX - 25}px`; 
+    effect.style.top = `${e.pageY - 25}px`; 
+    document.body.appendChild(effect);
+
+    setTimeout(() => effect.remove(), 500); 
 });
